@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Сначала копируем только requirements.txt для кэширования
 COPY requirements.txt .
-COPY ./static /app/static
+
 
 
 # Устанавливаем зависимости
