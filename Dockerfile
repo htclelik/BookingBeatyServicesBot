@@ -1,20 +1,18 @@
 # Используем официальный образ Python
 FROM python:3.12-slim
 
+# Устанавливаем рабочую директорию (лучше использовать /app)
+WORKDIR /app
 
+# Сначала копируем только requirements.txt для кэширования
+COPY requirements.txt .
 
-# Устанавливаем рабочую директорию
-WORKDIR /
-
-# Копируем файл зависимостей
-COPY ./requirements.txt /app/requirements.txt
-
-# Обновляем pip и устанавливаем зависимости
+# Устанавливаем зависимости
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Копируем всю структуру проекта в рабочую директорию
+# Копируем ВСЕ файлы проекта (включая папку app)
 COPY . .
 
-# Команда запуска вашего приложения (измените путь к main.py на актуальный)
-CMD ["python", "app/main.py"]
+# Команда запуска (указываем правильный путь к главному файлу)
+CMD ["python", "app/main.py"]  # Или другой ваш главный файл
