@@ -17,4 +17,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 # Команда запуска вашего приложения (измените путь к main.py на актуальный)
-CMD ["python", "app/main.py"]
+CMD ["python", "main.py"]
