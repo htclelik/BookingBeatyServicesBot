@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 # Копируем ВСЕ файлы проекта (включая папку app)
 COPY . .
+ENV PYTHONPATH=/app
 
 # Команда запуска (указываем правильный путь к главному файлу)
 CMD ["python", "app/main.py"]
