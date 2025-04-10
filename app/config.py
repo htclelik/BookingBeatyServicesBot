@@ -1,4 +1,6 @@
 # config.py
+import base64
+import json
 import os
 from dotenv import load_dotenv
 
@@ -26,6 +28,16 @@ MAX_HISTORY_LENGTH = 4095
 
 # Окружение
 ENVIRONMENT=os.getenv("ENVIRONMENT")
+
+# Декодируем JSON из переменной
+creds_b64 = os.getenv("GOOGLE_CREDENTIALS_B64")
+if not creds_b64:
+    raise ValueError("GOOGLE_CREDENTIALS_B64 не установлен!")
+
+# Сохраняем во временный файл (если нужно)
+GOOGLE_CREDENTIALS_PATH = "/tmp/google_creds.json"
+with open(GOOGLE_CREDENTIALS_PATH, "w") as f:
+    f.write(base64.b64decode(creds_b64).decode())
 
 # Доступ к таблице
 GOOGLE_CREDENTIALS_PATH = os.path.abspath(os.getenv("GOOGLE_CREDENTIALS_PATH"))
