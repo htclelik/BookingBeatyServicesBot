@@ -15,12 +15,8 @@ _reminders_worksheet = None
 _bookings_log_worksheet = None
 _google_sheets_client = None
 
-
-
 def get_google_sheets_client():
-    # scope = SCOPES_FEED_DRIVE
-    # creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDENTIALS_PATH, scope)
-    # client = gspread.authorize(creds)
+
     global _google_sheets_client
     if _google_sheets_client is None:
         try:
@@ -44,9 +40,6 @@ def get_reminders_worksheet():
         try:
             client = get_google_sheets_client()
             spreadsheet = client.open(GOOGLE_SHEET_NAME)
-            # # Предполагаем, что GOOGLE_SHEET_ID содержит ID из URL
-            # spreadsheet_id = GOOGLE_SHEET_ID  # Или как называется переменная с ID
-            # spreadsheet = client.open_by_key(spreadsheet_id)
             _reminders_worksheet = spreadsheet.worksheet(REMINDERS_WORKSHEET_NAME)
             logger.info(f"Рабочий лист '{REMINDERS_WORKSHEET_NAME}' успешно получен.")
         except gspread.exceptions.WorksheetNotFound:

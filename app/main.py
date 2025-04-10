@@ -23,12 +23,9 @@ logger = setup_logger(__name__)
 async def set_default_commands(bot_instance: Bot): # Принимаем bot как аргумент
     commands = [
         BotCommand(command="start", description="🏁Начало работы"),
-        # BotCommand(command="assistant", description="💬Общение с ассистентом"),
-        # BotCommand(command="info", description="ℹ️Информация о нас:👩‍🦰🧔🏻‍♂️Мастера, 🛠️💅💇‍♂️👨‍💻Услуги"),
-        # BotCommand(command="book", description="📆Записаться на удобное время"),
-        # BotCommand(command="gift", description="🎁Акции, Подарки"),
+
         BotCommand(command="help", description="🛟Помощь по работе ассистента или обратиться в тех.поддержку"),
-        # Убери cancel, если он не используется повсеместно или замени на команду отмены FSM
+
         BotCommand(command="cancel", description="🚫Отменить операцию")
     ]
     await bot_instance.set_my_commands(commands)

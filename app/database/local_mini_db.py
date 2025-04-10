@@ -35,7 +35,7 @@ INFO_LIST_MASTER = {
         "work_start_hour": 9,
         "work_end_hour": 18,
         "work_days": "Вт-Вс",
-        "weekend": "Пн"  # "Сб, Вс"
+        "weekend": "Пн"
     },
 MASTERS_ID[1]: {
         # "master_id": MASTERS_ID[1],
@@ -72,35 +72,10 @@ MASTERS_ID[1]: {
         "work_start_hour": 9,
         "work_end_hour": 19,
         "work_days": "Вт-Вс",
-        "weekend": "Пн" #"Сб, Вс"
+        "weekend": "Пн"
 
     },
-# MASTERS_ID[2]: {
-#         # "master_id": MASTERS_ID[1],
-#         "name_master": "Алексей",
-#         "photo_url": "/Users/leik.van-23/PycharmProjects/BookingBeatyServicesBot/app/static/photo_bot_01.jpeg",
-#         "welcome_short_text": "👋Всем привет, с вами всегда на 🛜связи",
-#         "brief_about_me": f"💇‍♂️🧔🏻‍♂️- Специалист по ерунде,\n",
-#
-#         "what your services mean":
-#                                    f"Сделайте эти детали своими союзниками\n"
-#                                    ,
-#
-#         "work_area": "разработка телеграмм бота",
-#         "experience": "1 год",
-#         "city": "Анапа",
-#         "address": "СОТ Колос ул.Сосновая 102 \nhttps://yandex.ru/maps/-/CDcP740h",
-#         "my_telegram": "https://t.me/+79222756869",
-#         "cl_telegram": "Скоро будет",
-#         "email": "htclelik@gmail.com",
-#         "vk_club": "https://vk.com/club228274205, \n\n "
-#                    "",
-#         "work_start_hour": 9,
-#         "work_end_hour": 18,
-#         "work_days": "Вт-Сб",
-#         "weekend": "Пн, Вс"
-#
-#     },
+
 }
 
 
@@ -130,15 +105,6 @@ MASTERS_ID[1]: {
         "brd02":{"full_name_service":"7️⃣📍👨🏻‍🦲Бритье шаветкой", "price": 500, "duration": 30, "select": False},
         "mtng01":{"full_name_service":"8️⃣👨️Знакомство с мастером", "price": 0, "duration": 30, "select": False}
     },
-# MASTERS_ID[2]: {
-# "tg01":{"full_name_service":"1️⃣Разработка TG с ИИ", "price": 70000, "duration": 60, "select": False},
-# "tg02":{"full_name_service":"2️⃣Разработка TG low_code", "price": 30000, "duration": 120, "select": False},
-# "webf01":{"full_name_service":"3️⃣Web приложение Flask", "price": 350000, "duration": 90, "select": False},
-# "site01":{"full_name_service":"4️⃣Разработка сайта no_code", "price": 900, "duration": 180, "select": False},
-# "cnsltnt01":{"full_name_service":"5️⃣Консультация first", "price": 0, "duration": 30, "select": False},
-# "cnsltnt02":{"full_name_service":"6️⃣Консультация", "price": 1800, "duration": 60, "select": False}
-#
-# }
 }
 
 

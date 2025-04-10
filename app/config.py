@@ -156,14 +156,6 @@ GOOGLE_CALENDAR_ID_2 = os.getenv("GOOGLE_CALENDAR_ID_2")
 # Timezone
 TIMEZONE = 'Europe/Moscow' # Укажи свой часовой пояс
 
-# Доступ к PostgresSQL
-POSTGRES_USER=os.getenv("POSTGRES_USER")
-POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD")
-POSTGRES_DB=os.getenv("POSTGRES_DB")
-POSTGRES_HOST=os.getenv("POSTGRES_HOST")
-POSTGRES_PORT=os.getenv("POSTGRES_PORT")
-DATABASE_URL=os.getenv("DATABASE_URL")
-
 # Список участников
 ADMIN_ID = list(map(int, os.getenv("ADMIN_ID", "").split(",")))
 MASTERS_ID = list(map(int, os.getenv("MASTERS_ID", "").split(",")))

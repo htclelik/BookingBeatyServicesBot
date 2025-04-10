@@ -156,18 +156,6 @@ class StateManager:
             reply_markup=create_inline_universal_keyboard(BACK_BUTTON, 1)
         )
 
-    # async def _handle_email_entry(self, msg: types.Message, state: FSMContext):
-    #     """
-    #     Обработка состояния ожидания ввода email.
-    #
-    #     Обоснование:
-    #       - Подобно предыдущему шагу, изолированный метод позволяет легко изменять сообщение или клавиатуру.
-    #     """
-    #     user_data = await state.get_data()
-    #     await msg.answer(
-    #         f"{user_data.get('name', 'Пользователь')}, {STEP_ENTER_EMAIL}",
-    #         reply_markup=create_inline_universal_keyboard(BACK_BUTTON, 1)
-    #     )
 
     async def _handle_master_selection(self, msg: types.Message, state: FSMContext):
         """
@@ -178,15 +166,6 @@ class StateManager:
           - Использование inline-клавиатуры обеспечивает интуитивный интерфейс.
         """
         user_data = await state.get_data()
-
-        #________________блок без ввода имени _______________
-        # name_user = msg.from_user.username
-        # id_user = msg.from_user.id
-        # first_name = msg.from_user.first_name
-        # logger.info(f"{first_name, name_user, id_user}")
-        # await state.update_data(id_user=id_user)
-        # await state.update_data(name_user=name_user)
-
 
         master_buttons = {
             master["name_master"]: f"booking_master_{master_id}"
@@ -373,7 +352,8 @@ class StateManager:
             # Если вторая часть не URL, оставляем как было (весь текст жирным)
 
         # Личный Telegram
-        telegram_url = master_info.get('my_telegram')
+        telegram_url = master_info.get('my_telegram', "Контакт не указан")
+        logger.info(f"{telegram_url}")
         telegram_html = f"💬 <a href='{telegram_url}'>Написать в Telegram</a>" if telegram_url else "Контакт Telegram не указан"
 
         # Email
@@ -394,8 +374,8 @@ class StateManager:
         summary_booking_text = (
             f"<b>📆Запись в календаре</b>\n\n"
             f"<b>Сводная информация о заказе:</b>\n\n"
-            f"👤<i>Клиент:</i> <b>{user_data.get('name', 'Пользователь')}</b>\n"
-            f"📞<i>Телефон:</i> <b>{user_data.get('phone', 'Телефон отсутствует')}</b>\n\n"
+            f"👤: <b>{user_data.get('name', 'Пользователь')}</b>\n"
+            # f"📞<i>Телефон:</i> <b>{user_data.get('phone', 'Телефон отсутствует')}</b>\n\n"
             f"🤩<i>Мастер:</i> <b>{user_data['master_name']}</b>\n"
             f"📍<i>Адрес:</i> <b>{address_html}</b>\n\n"
             f"📶Для связи с мастером используйте \n{telegram_html}\nили{email_html}\n\n"
@@ -428,7 +408,8 @@ class StateManager:
         current_state = await state.get_state()
         logger.info(f"Текущее состояние: {current_state}")
         user_data = await state.get_data()
-        logger.info(f"Текущие данные: {user_data}")
+        master_info = INFO_LIST_MASTER.get(int(user_data['master_id']))
+        logger.info(f"Текущие данные: {user_data}" f"{master_info['my_telegram']}")
         await msg.answer(
             FINISH_TEXT,
             parse_mode="HTML",
