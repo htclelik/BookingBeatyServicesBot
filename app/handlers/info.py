@@ -1,7 +1,7 @@
 # app/handlers/info.py
 # Команды /info , кнопка "О нас"
 from aiogram import Router, types, Bot
-from aiogram.types import FSInputFile
+from aiogram.types import FSInputFile, URLInputFile
 
 from app.database.local_mini_db import MASTER_SERVICES_FULL, INFO_LIST_MASTER
 from app.keyboards.inline import create_inline_universal_keyboard  # get_masters_keyboard, get_services_keyboard,
@@ -115,7 +115,9 @@ async def master_info_handler(callback_query: types.CallbackQuery, bot: Bot):
         )
 
         # Используем FSInputFile для отправки локального файла
-        photo = FSInputFile(master["photo_url"])
+        # photo = FSInputFile(master["photo_url"])
+        # photo_url = f"https://drive.google.com/uc?export=view&id={file_id}"
+        photo = URLInputFile(master["photo_url"])
 
         try:
             short_caption = f"{master['welcome_short_text']} <b>{master['name_master']}</b>\n{master['brief_about_me']}"

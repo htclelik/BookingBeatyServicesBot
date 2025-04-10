@@ -18,7 +18,7 @@ INFO_LIST_MASTER = {
     MASTERS_ID[0]: {
         # "master_id": MASTERS_ID[0],
         "name_master": "Наташа",
-        "photo_url": "static/master_nata.jpg", # 🔥 Ссылка на фото
+        "photo_url": "https://drive.google.com/uc?export=view&id=16FnOsps0U-PqNGkujKTbi5vEgQcUjFuF",#"static/master_nata.jpg", # 🔥 Ссылка на фото
         "welcome_short_text": "👩‍🦰Здравствуйте, мои дорогие,\n меня зовут ",
         "brief_about_me": "💅мастер по маникюру и педикюру.",
         "what your services mean": f"Ухоженные ногти-👌успех женской красоты 💐.\n\n"
@@ -40,7 +40,7 @@ INFO_LIST_MASTER = {
 MASTERS_ID[1]: {
         # "master_id": MASTERS_ID[1],
         "name_master": "Виктор",
-        "photo_url": "static/Виктор.jpeg",
+        "photo_url": "https://drive.google.com/uc?export=view&id=1zB0s990u-v4IzJVrhiY2l3FZPAGgH8vf",#"static/Виктор.jpeg",
         "welcome_short_text": "👋Всем привет, с вами всегда на контакте 📶",
         "brief_about_me": f"💇‍♂️🧔🏻‍♂️- Специалист по мужским прическам и бороде,\n"
                           f"от Классики и Полубокса к конечно современный Фейд,\n"
