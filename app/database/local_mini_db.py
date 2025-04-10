@@ -67,8 +67,7 @@ MASTERS_ID[1]: {
         "my_telegram": "https://t.me/+79009839979",
         "cl_telegram": "Скоро будет",
         "email": "vikdal110@gmail.com",
-        "vk_club": "https://vk.com/club229861805, \n\n "
-                   "",
+        "vk_club": "https://vk.com/club229861805",
         "work_start_hour": 9,
         "work_end_hour": 19,
         "work_days": "Вт-Вс",
