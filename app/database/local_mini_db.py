@@ -18,7 +18,7 @@ INFO_LIST_MASTER = {
     MASTERS_ID[0]: {
         # "master_id": MASTERS_ID[0],
         "name_master": "Наташа",
-        "photo_url": "/Users/leik.van-23/PycharmProjects/BookingBeatyServicesBot/app/static/master_nata.jpg", # 🔥 Ссылка на фото
+        "photo_url": "https://github.com/htclelik/BookingBeatyServicesBot/blob/main/app/static/master_nata.jpg",#"/app/static/master_nata.jpg", # 🔥 Ссылка на фото
         "welcome_short_text": "👩‍🦰Здравствуйте, мои дорогие,\n меня зовут ",
         "brief_about_me": "💅мастер по маникюру и педикюру.",
         "what your services mean": f"Ухоженные ногти-👌успех женской красоты 💐.\n\n"
@@ -40,7 +40,7 @@ INFO_LIST_MASTER = {
 MASTERS_ID[1]: {
         # "master_id": MASTERS_ID[1],
         "name_master": "Виктор",
-        "photo_url": "/Users/leik.van-23/PycharmProjects/BookingBeatyServicesBot/app/static/Виктор.jpeg",
+        "photo_url": "https://github.com/htclelik/BookingBeatyServicesBot/blob/main/app/static/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80.jpeg",#"/app/static/Виктор.jpeg",
         "welcome_short_text": "👋Всем привет, с вами всегда на контакте 📶",
         "brief_about_me": f"💇‍♂️🧔🏻‍♂️- Специалист по мужским прическам и бороде,\n"
                           f"от Классики и Полубокса к конечно современный Фейд,\n"
