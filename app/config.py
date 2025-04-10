@@ -33,7 +33,7 @@ ENVIRONMENT=os.getenv("ENVIRONMENT")
 
 
 # Сохраняем во временный файл (если нужно)
-# GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH")
+GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH")
 GOOGLE_CREDENTIALS_B64 = os.getenv("GOOGLE_CREDENTIALS_B64")
 # Доступ к таблице
 
