@@ -29,18 +29,14 @@ MAX_HISTORY_LENGTH = 4095
 # Окружение
 ENVIRONMENT=os.getenv("ENVIRONMENT")
 
-# Декодируем JSON из переменной
-creds_b64 = os.getenv("GOOGLE_CREDENTIALS_B64")
-if not creds_b64:
-    raise ValueError("GOOGLE_CREDENTIALS_B64 не установлен!")
+
+
 
 # Сохраняем во временный файл (если нужно)
-GOOGLE_CREDENTIALS_PATH = "/tmp/google_creds.json"
-with open(GOOGLE_CREDENTIALS_PATH, "w") as f:
-    f.write(base64.b64decode(creds_b64).decode())
-
+# GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH")
+GOOGLE_CREDENTIALS_B64 = os.getenv("GOOGLE_CREDENTIALS_B64")
 # Доступ к таблице
-GOOGLE_CREDENTIALS_PATH = os.path.abspath(os.getenv("GOOGLE_CREDENTIALS_PATH"))
+
 SCOPES_SHEETS = ['https://www.googleapis.com/auth/spreadsheets']
 SCOPES_FEED_DRIVE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 SCOPES_CALENDAR = ['https://www.googleapis.com/auth/calendar']
