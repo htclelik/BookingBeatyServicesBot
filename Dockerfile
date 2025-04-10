@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 # Команда запуска (указываем правильный путь к главному файлу)
-CMD ["python", "app/main.py"]  # Или другой ваш главный файл
+CMD ["python", "app/main.py"]
