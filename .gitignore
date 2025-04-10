@@ -3,7 +3,7 @@
 
    .vscode/
 # Игнорируем секретные данные
-app/secrets/manicureanapa-ccd756373f09.json
+app/secrets/
 .env
 *.log
 node_modules/
